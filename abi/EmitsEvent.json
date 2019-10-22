@@ -1,0 +1,840 @@
+{
+  "contractName": "EmitsEvent",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "status",
+          "type": "int8"
+        },
+        {
+          "indexed": false,
+          "name": "statement",
+          "type": "string"
+        }
+      ],
+      "name": "ActionDone",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"status\",\"type\":\"int8\"},{\"indexed\":false,\"name\":\"statement\",\"type\":\"string\"}],\"name\":\"ActionDone\",\"type\":\"event\"}],\"devdoc\":{\"details\":\"contract to hold all the events that we emit\",\"methods\":{},\"title\":\"EmitsEvent\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/cmdlucas/blockchain-dev/harchive-node/contracts/_event/EmitsEvent.sol\":\"EmitsEvent\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/cmdlucas/blockchain-dev/harchive-node/contracts/_event/EmitsEvent.sol\":{\"keccak256\":\"0xa76df0e5718f52f70c8473e9cddf18d848a1ba9c726f6530bce05b8874a884a5\",\"urls\":[\"bzzr://d0d64757659270ddf6cf8b6fcea9572baee4c9fbfa8c079b6782bc54118a952f\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a72305820dbaec594621d498cad7b676e130b7e966aae46b9a9b52cf6592cc8088821afdb0029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820dbaec594621d498cad7b676e130b7e966aae46b9a9b52cf6592cc8088821afdb0029",
+  "sourceMap": "107:319:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;107:319:1;;;;;;;",
+  "deployedSourceMap": "107:319:1:-;;;;;",
+  "source": "pragma solidity ^0.5.0;\n\n/**\n * @title EmitsEvent\n * @dev contract to hold all the events that we emit\n */\ncontract EmitsEvent {\n    event ActionDone(int8 status, string statement);\n    \n    function emitActionSuccess(string memory statement) internal\n    {\n        emit ActionDone(1, statement);\n    }\n    \n    function emitActionFailure(string memory statement) internal\n    {\n        emit ActionDone(-1, statement);\n    }\n}",
+  "sourcePath": "/home/cmdlucas/blockchain-dev/harchive-node/contracts/_event/EmitsEvent.sol",
+  "ast": {
+    "absolutePath": "/home/cmdlucas/blockchain-dev/harchive-node/contracts/_event/EmitsEvent.sol",
+    "exportedSymbols": {
+      "EmitsEvent": [
+        88
+      ]
+    },
+    "id": 89,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title EmitsEvent\n@dev contract to hold all the events that we emit",
+        "fullyImplemented": true,
+        "id": 88,
+        "linearizedBaseContracts": [
+          88
+        ],
+        "name": "EmitsEvent",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 64,
+            "name": "ActionDone",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 63,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60,
+                  "indexed": false,
+                  "name": "status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64,
+                  "src": "150:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int8",
+                    "typeString": "int8"
+                  },
+                  "typeName": {
+                    "id": 59,
+                    "name": "int8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "150:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int8",
+                      "typeString": "int8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62,
+                  "indexed": false,
+                  "name": "statement",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64,
+                  "src": "163:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "163:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "149:31:1"
+            },
+            "src": "133:48:1"
+          },
+          {
+            "body": {
+              "id": 74,
+              "nodeType": "Block",
+              "src": "256:46:1",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 70,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "282:1:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 71,
+                        "name": "statement",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 66,
+                        "src": "285:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 69,
+                      "name": "ActionDone",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 64,
+                      "src": "271:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_int8_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (int8,string memory)"
+                      }
+                    },
+                    "id": 72,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "271:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 73,
+                  "nodeType": "EmitStatement",
+                  "src": "266:29:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 75,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "emitActionSuccess",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 67,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 66,
+                  "name": "statement",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 75,
+                  "src": "218:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 65,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "218:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "217:25:1"
+            },
+            "returnParameters": {
+              "id": 68,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "256:0:1"
+            },
+            "scope": 88,
+            "src": "191:111:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 86,
+              "nodeType": "Block",
+              "src": "377:47:1",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 82,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "-",
+                        "prefix": true,
+                        "src": "403:2:1",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 81,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "404:1:1",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1_by_1",
+                            "typeString": "int_const 1"
+                          },
+                          "value": "1"
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_minus_1_by_1",
+                          "typeString": "int_const -1"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 83,
+                        "name": "statement",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 77,
+                        "src": "407:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_minus_1_by_1",
+                          "typeString": "int_const -1"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 80,
+                      "name": "ActionDone",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 64,
+                      "src": "392:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_int8_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (int8,string memory)"
+                      }
+                    },
+                    "id": 84,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "392:25:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 85,
+                  "nodeType": "EmitStatement",
+                  "src": "387:30:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 87,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "emitActionFailure",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 78,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 77,
+                  "name": "statement",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 87,
+                  "src": "339:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 76,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "339:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "338:25:1"
+            },
+            "returnParameters": {
+              "id": 79,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "377:0:1"
+            },
+            "scope": 88,
+            "src": "312:112:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 89,
+        "src": "107:319:1"
+      }
+    ],
+    "src": "0:426:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/cmdlucas/blockchain-dev/harchive-node/contracts/_event/EmitsEvent.sol",
+    "exportedSymbols": {
+      "EmitsEvent": [
+        88
+      ]
+    },
+    "id": 89,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title EmitsEvent\n@dev contract to hold all the events that we emit",
+        "fullyImplemented": true,
+        "id": 88,
+        "linearizedBaseContracts": [
+          88
+        ],
+        "name": "EmitsEvent",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 64,
+            "name": "ActionDone",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 63,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60,
+                  "indexed": false,
+                  "name": "status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64,
+                  "src": "150:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int8",
+                    "typeString": "int8"
+                  },
+                  "typeName": {
+                    "id": 59,
+                    "name": "int8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "150:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int8",
+                      "typeString": "int8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62,
+                  "indexed": false,
+                  "name": "statement",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64,
+                  "src": "163:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "163:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "149:31:1"
+            },
+            "src": "133:48:1"
+          },
+          {
+            "body": {
+              "id": 74,
+              "nodeType": "Block",
+              "src": "256:46:1",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 70,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "282:1:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 71,
+                        "name": "statement",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 66,
+                        "src": "285:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 69,
+                      "name": "ActionDone",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 64,
+                      "src": "271:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_int8_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (int8,string memory)"
+                      }
+                    },
+                    "id": 72,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "271:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 73,
+                  "nodeType": "EmitStatement",
+                  "src": "266:29:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 75,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "emitActionSuccess",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 67,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 66,
+                  "name": "statement",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 75,
+                  "src": "218:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 65,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "218:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "217:25:1"
+            },
+            "returnParameters": {
+              "id": 68,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "256:0:1"
+            },
+            "scope": 88,
+            "src": "191:111:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 86,
+              "nodeType": "Block",
+              "src": "377:47:1",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 82,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "-",
+                        "prefix": true,
+                        "src": "403:2:1",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 81,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "404:1:1",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1_by_1",
+                            "typeString": "int_const 1"
+                          },
+                          "value": "1"
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_minus_1_by_1",
+                          "typeString": "int_const -1"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 83,
+                        "name": "statement",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 77,
+                        "src": "407:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_minus_1_by_1",
+                          "typeString": "int_const -1"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 80,
+                      "name": "ActionDone",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 64,
+                      "src": "392:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_int8_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (int8,string memory)"
+                      }
+                    },
+                    "id": 84,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "392:25:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 85,
+                  "nodeType": "EmitStatement",
+                  "src": "387:30:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 87,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "emitActionFailure",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 78,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 77,
+                  "name": "statement",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 87,
+                  "src": "339:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 76,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "339:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "338:25:1"
+            },
+            "returnParameters": {
+              "id": 79,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "377:0:1"
+            },
+            "scope": 88,
+            "src": "312:112:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 89,
+        "src": "107:319:1"
+      }
+    ],
+    "src": "0:426:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-09-10T04:41:20.373Z",
+  "devdoc": {
+    "details": "contract to hold all the events that we emit",
+    "methods": {},
+    "title": "EmitsEvent"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

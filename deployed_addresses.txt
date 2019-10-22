@@ -1,0 +1,11 @@
+Description of where our contracts live
+
+testnet: rinkeby
+
+deployed contract addresses:
+   
+   -  UserManager 
+      - #
+
+   -  AssetManager
+      - #

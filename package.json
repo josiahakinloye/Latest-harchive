@@ -1,0 +1,29 @@
+{
+  "name": "harchive-node",
+  "version": "1.0.0",
+  "description": "Asset managmenet dApp that is powered by the blockchain",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/cmdlucas/harchive-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/cmdlucas/harchive-node/issues"
+  },
+  "homepage": "https://gitlab.com/cmdlucas/harchive-node#README",
+  "devDependencies": {
+    "path": "^0.12.7"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.0.18"
+  }
+}

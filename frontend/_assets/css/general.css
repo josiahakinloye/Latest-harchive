@@ -1,0 +1,221 @@
+button:focus, a:focus{
+    outline: 0px;
+}
+input[readonly] {
+    background-color: white !important;
+}
+.mobile{
+    display: none;
+}
+.desktop{
+    display: block;
+}
+.my-bg-primary{
+    background: #343a40;
+}
+.bg-primary{
+    background-color: #343a40 !important;
+}
+.bg-primary-dark{
+    background-color: #343a40;
+}
+.bg-orange-deep{
+    background-color: #e9692c;; 
+}
+.bg-white{
+    background-color: white;
+}
+.bg-ash-dark{
+    background-color: #777777;
+}
+.screenBack{
+    background-color: #F3F3F3;
+}
+.colorPrimary{
+    color: #005703;
+}
+.colorDefaultIcon{
+    color: #DDDDDD;
+}
+.colorArticle{
+    color: #494949;
+}
+.colorAccent{
+    color: #FFFFFF;
+}
+.colorAccent-2{
+    color: #00bd65;
+}
+.orangeDeep{
+    color: #e9692c;
+}
+.colorWhite{
+    color: #ffffff;
+}
+.no-elevation{
+    box-shadow: 0px 0px 0px #000000 !important;
+}
+.elevation-5px-bottom{
+    box-shadow: 0px 0.5px 2.5px #777777;
+}
+.elevation-10px-bottom{
+    box-shadow: 0px 1px 5px #777777;
+}
+.elevation-20px-bottom{
+    box-shadow: 0px 2px 10px #777777;
+}
+.elevation-40px-bottom{
+    box-shadow: 0px 4px 20px #777777;
+}
+.elevation-60px-bottom{
+    box-shadow: 0px 6px 30px #777777;
+}
+.elevation-tiny-left{
+    box-shadow: -1.5px 0.5px 2.5px #777777 !important;
+}
+.elevation-10px-left{
+    box-shadow: -1.5px 1px 5px #777777;
+}
+.elevation-40px-left{
+    box-shadow: -1.5px 4px 20px #777777;
+}
+.div-25-percent, .pact-25-percent{
+    width: 24.5%;
+    display: inline-block;
+}
+.div-50-percent, .pact-50-percent{
+    width: 50%;
+    display: inline-block;
+}
+.div-75-percent, .pact-75-percent{
+    width: 75%;
+    display: inline-block;
+}
+.div-100-percent, .pact-100-percent{
+    width: 100%;
+}
+.float-right{
+    float: right !important;
+}
+.centerize{
+    width: 100% !important;
+    text-align: center !important;
+}
+.position-rel{
+    position: relative;
+}
+.no-v-padding{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.no-h-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.no-padding{
+    padding: 0px;
+}
+.no-bottom-border{
+    border-bottom: 0px !important;
+}
+.no-visible{
+    height: 0px;
+    width: 0px;
+    visibility: hidden !important;
+}
+.gone{
+    display: none !important;
+}
+.no-user-select{
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+.hover-underline:hover{
+    color: #05141f;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.panel-heading-2 {
+    padding: 5px 15px;
+    border-bottom: 0px solid transparent;
+    border-radius: 0px;
+    background-color: #343a40 !important;
+}
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+}
+.panel-title .triangle-topleft {
+    width: 0;
+    height: 0;
+    margin-left: -4px;
+    margin-top: 2px;
+    margin-right: 6px;
+    float: left;
+    border-top: 10px solid #fdd831;
+    border-right: 10px solid transparent;
+}
+.flip-horizontal{
+    transform: rotateY(180deg);
+}
+.col-shadow-back{
+    width: 100%;
+    min-height: 100px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgba(145, 145, 145, 0.2);
+}
+.shadowback-col-title,
+.shadowback-col-body{
+    padding: 5px 10px;
+}
+.shadowback-col-title{
+    border-bottom: 1px solid #dddddd;
+}
+.shadowback-col-title p{
+    margin: 0px;
+}
+.shadowback-col-body .selector{
+    cursor: pointer;
+}
+.react-datepicker-wrapper,
+.react-datepicker__input-container{
+    display: block !important;
+}
+@media (max-width: 576px) {
+    .div-25-percent{
+        width: auto;
+   }
+    .div-50-percent{
+        width: auto;
+   }
+    .div-75-percent{
+        width: auto;
+   }
+    .div-100-percent{
+        width: auto;
+   }
+}
+@media (max-width: 768px) {
+    .mobile{
+        display: block;
+   }
+    .desktop{
+        display: none;
+   }
+}
+@media (max-width: 992px) {
+    .pact-25-percent{
+        width: 23.5%;
+    }
+    .mobile{
+        display: block;
+   }
+    .desktop{
+        display: none;
+   }
+}
